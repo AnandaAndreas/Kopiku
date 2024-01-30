@@ -1,0 +1,265 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+li,a{
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.navbar-container{
+    /* border-bottom: 1px solid #E2E8F0; */
+    /* background-color: #3C3633; */
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.hamburger{
+    display: none;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-color: #3C3633;
+}
+
+.navbar .nav-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem 1rem;
+}
+
+.nav-link{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #3C3633;
+    
+}
+
+.navbar-container .nav-menu .nav-link{
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-container .nav-menu li:hover a{
+    color: #fff;
+    background-color:#3C3633 ;
+}
+
+.logo{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #3C3633;
+
+}
+
+@media only screen and (max-width: 768px){
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        color: #3C3633;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+
+    .nav-item{
+        margin: 2.5rem 0;
+    }
+
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Main  */
+main{
+    /* padding: ; */
+    display: flex;
+    /* background-color: #3C3633; */
+    padding: 1rem 7.5rem;
+    align-items: center;
+}
+
+.beranda{
+    flex: 1 ;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.beranda .beranda-description{
+    flex: 1 1;
+}
+
+.beranda .beranda-description button{
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+
+    background-color: #3C3633;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+.beranda .beranda-description button:hover{
+    border: 3px solid #3C3633;
+    background-color: transparent;
+    color: #3C3633;
+}
+
+.beranda .beranda-image{
+    flex: 1;
+    display: flex;
+}
+
+.beranda img{
+    width: 300px;
+    /* height: 400px; */
+    min-width: 250px;
+    margin: auto;
+}
+
+.beranda p{
+    font-size: 1.5rem;
+    color: #3C3633;
+}
+
+.beranda h1{
+    font-size: 2.5rem;
+    color: #3C3633;
+
+}
+
+main aside{
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+}
+
+main aside .social-media{
+    height: 100%;
+    display: flex;
+}
+
+main aside .social-media ul{
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin: auto;
+    background-color: #3C3633;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main aside .social-media li{
+    list-style-type: none;
+    color: #fff;
+}
+
+main aside .social-media li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+
+    transition: all 0.1s ease-in-out;
+}
+
+footer {
+    color: white;
+    /* height: auto; */
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    line-height: 50px;
+    background: #3C3633;
+    position: absolute;
+    bottom: 0px;
+}
+
+@media screen and (max-width: 768px){
+    main{
+        padding: 1rem 3rem;
+    }
+
+    main .beranda{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main .beranda .beranda-description{
+        font-size: 3rem;
+    }
+
+    main .beranda .beranda-description .title{
+        font-size: 3rem;
+    }
+
+    main .beranda .beranda-description p{
+        font-size: 1rem;
+    }
+
+    main .beranda .beranda-image{
+        order: -1;
+    }
+
+    footer{
+        position: relative;
+        width: 100%;
+    }
+}
+
