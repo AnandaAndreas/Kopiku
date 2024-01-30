@@ -235,6 +235,10 @@ footer {
     main{
         padding: 1rem 3rem;
     }
+    nav{
+        position: relative;
+        z-index: 99;
+    }
 
     main .beranda{
         flex-direction: column;
